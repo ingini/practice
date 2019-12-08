@@ -1,0 +1,17 @@
+import date
+ 
+test_date= text['D953']
+convert_date = datetime.datetime.strptime(test_date, "%d-%m-%Y").date()
+
+today = datetime.datetime.today().strftime("%Y-%m-%d").split('-')
+
+
+
+
+DD / MM / YYYY에서 YYYY-MM-DD로 날짜 변환
+변환 Date로struct_time 날짜 시간을 struct_time
+
+
+import datetime
+
+print(datetime.datetime.strptime(text['D953'], "%d/%m/%Y").strftime("%Y-%m-%d"))
