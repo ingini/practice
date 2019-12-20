@@ -1,3 +1,5 @@
+
+# 전역변수와 지역변수가 함께 사용된 프로그램
 seconds_per_minute = 60  # 1분은 60초 ❶
 
 def minutes_to_seconds(minutes):
@@ -8,6 +10,7 @@ def minutes_to_seconds(minutes):
 print(minutes_to_seconds(3))  # 화면에 180이 출력된다
 # print(seconds)  # ❸ 오류! 함수 밖에서 지역변수를 불렀다
 
+# 전역변수와 지역변수 구별하기
 pi = 3.141592653589793
 
 def area_of_circle(radius):
@@ -25,7 +28,7 @@ def volume_of_cylinder(radius, height):
 result = volume_of_cylinder(5, 10)
 print(result)
 
-
+# 함수 안에서 전역변수를 수정하려는 오류
 num_stamp = 0  # 쿠폰 스탬프가 찍힌 횟수 (전역변수)
 
 def stamp():
@@ -33,7 +36,7 @@ def stamp():
     num_stamp = num_stamp + 1  # ❶ 전역변수를 수정하려고 시도함
     print(num_stamp)
 
-
+# global 문의 사용
 num_stamp = 0  # 쿠폰 스탬프가 찍힌 횟수 (전역변수)
 
 def stamp():
@@ -45,7 +48,7 @@ def stamp():
 stamp()  # 화면에 1이 출력된다
 stamp()  # 화면에 2가 출력된다
 
-
+# 매개변수와 반환을 이용한 stamp() 함수
 num_stamp = 0  # ❶ 쿠폰 스탬프가 찍힌 횟수 (전역변수)
 
 def stamp(num_stamp):  # ❷ 지역변수(매개변수) num_stamp
